@@ -1,4 +1,4 @@
 # New Project
 Boilerplate for new frontend projects
-
-1. run "npm install" from assets/source/controllers
+## Getting started
+1. run "npm install" from assets/source/controllers. Boom, done.
