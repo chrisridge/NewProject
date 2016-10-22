@@ -1,0 +1,52 @@
+body {
+    font-family: $font-family;
+    @include font-size($font-size);
+    color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $header-color;
+}
+
+h1, .h1 {
+    @include font-size($font-size-h1);
+}
+
+h2, .h2 {
+    @include font-size($font-size-h2);
+}
+
+h3, .h3 {
+    @include font-size($font-size-h3);
+}
+
+h4, .h4 {
+    @include font-size($font-size-h4);
+    font-family: $font-family-secondary;
+    color: $header-color-secondary;
+}
+
+h5, .h5 {
+    @include font-size($font-size-h5);
+}
+
+h6, .h6 {
+    @include font-size($font-size-h6);
+    font-family: $font-family-secondary;
+    color: $header-color-secondary;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+em, i {
+    font-style: italic;
+}
+
+a:active,
+a:hover {
+  outline-width: 1;
+}
+
+@include links($link-color, $link-color-active, $link-color-hover);

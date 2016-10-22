@@ -1,0 +1,50 @@
+// TYPOGRAPHY -----------------------------------------------------------------
+
+$font-family: Verdana, Arial, sans-serif;
+$font-family-secondary: Georgia, "Times New Roman", serif;
+
+$font-size: 16;
+$font-size-h1: 54;
+$font-size-h2: 26;
+$font-size-h3: 16;
+$font-size-h4: 16;
+$font-size-h5: 14;
+$font-size-h6: 14;
+
+$text-color: #1e1e1e;
+$text-color-secondary: #414141;
+$text-color-tertiary: #6c6c6c;
+
+$header-color: #6c6c6c;
+$header-color-secondary: #414141;
+
+$link-color: #5a00ff;
+$link-color-active: #00deff;
+$link-color-hover: #ff0054;
+
+
+// GRID -----------------------------------------------------------------------
+
+// Set column class identifier
+$grid-column-class: column;
+
+// Set offset class identifier
+$grid-offset-class: offset;
+
+// Set grid width
+$grid-width: 100%;
+
+// Set number of columns
+$grid-column-number: 16;
+
+// Set the initial breakpoint. Sizes below this will display columns linearly.
+$breakpoint-xs: 480px;
+
+// Set the small breakpoint
+$breakpoint-s: 960px;
+
+// Set the large breakpoint
+$breakpoint-l: 1200px;
+
+// Set the extra large breakpoint
+$breakpoint-xl: 1680px;

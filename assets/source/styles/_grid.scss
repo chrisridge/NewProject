@@ -1,0 +1,90 @@
+// CLEARFIX -------------------------------------------------------------------
+
+.row  {
+    position: relative;
+    width: $grid-width;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// DEFAULT COLUMN STYLE -------------------------------------------------------
+
+%column-style {
+    width: 100%;
+    float: none;
+    box-sizing: border-box;
+}
+
+// Generate the default linear layout
+@mixin extend-column-styles($style) {
+    // Cycle throgh the columns and add them to the imported style.
+    @for $item from 1 through $grid-column-number {
+        .#{$grid-column-class}-#{$item} {
+            @extend %#{$style};
+        }
+    }
+}
+
+@mixin generate-classes-and-offsets($modifier) {
+    // Cycles through and calculates the width and offset margin of each column.
+    @for $item from 1 through $grid-column-number {
+        // Generate the class and calculate column width
+        // .class-number--modifier
+        .#{$grid-column-class}-#{$item}#{$modifier} {
+            width: $grid-width / ($grid-column-number/$item);
+        }
+        // Calculate the offset
+        .#{$grid-offset-class}-#{$item}#{$modifier} {
+            margin-left: $grid-width / ($grid-column-number/$item);
+        }
+    }
+    // Create a class to remove the offset margin
+    .offset-0#{$modifier} {
+        margin-left: 0;
+    }
+    // Create a class to hide the column
+    .hide#{$modifier} {
+        display: none;
+    }
+}
+
+// Include the linear layout as default
+@include extend-column-styles (column-style);
+
+@media (min-width:$breakpoint-xs) {
+    %column-style--float {
+        float: left;
+    }
+    // Regenerate the column styles using floats
+    @include extend-column-styles(column-style--float);
+    @include generate-classes-and-offsets(null);
+}
+
+// BREAKPOINTS ----------------------------------------------------------------
+
+// Mobile
+@include breakpoint(mobile){
+    @include generate-classes-and-offsets("--xs");
+}
+// Tablet
+@include breakpoint(tablet){
+    @include generate-classes-and-offsets("--s");
+}
+// Desktop
+@include breakpoint(desktop){
+    @include generate-classes-and-offsets("--m");
+}
+// Large Desktop
+@include breakpoint(large-desktop){
+    @include generate-classes-and-offsets("--l");
+}
+// Superwide
+@include breakpoint(superwide){
+    @include generate-classes-and-offsets("--xl");
+}
