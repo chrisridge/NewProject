@@ -43,6 +43,10 @@ var root = {
         destination: "../distribution/markup/",
         source: "../source/markup/**/*.kit"
     },
+    index = {
+        destination: "../../",
+        source: "../source/markup/index.kit"
+    },
     images = {
         destination: "../distribution/images/",
         source: "../source/images/**/*"
@@ -73,6 +77,13 @@ gulp.task('markup', function() {
         .pipe(gulp.dest(markup.destination));
 });
 
+gulp.task('index', function() {
+    return gulp.src(index.source)
+        .pipe(plumber())
+        .pipe(kit())
+        .pipe(gulp.dest(index.destination));
+});
+
 gulp.task('images', function() {
     return gulp.src(images.source)
         .pipe(imagemin())
@@ -83,6 +94,7 @@ gulp.task('watch', function () {
     gulp.watch(scripts.source, ['scripts']);
     gulp.watch(styles.source, ['styles']);
     gulp.watch(markup.source, ['markup']);
+    gulp.watch(index.source, ['index']);
 });
 
 gulp.task('default', ['watch']);
