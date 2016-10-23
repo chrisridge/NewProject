@@ -24,10 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chrisridge/boilerplate.git"
+    "url": "https://github.com/chrisridge/NewProject"
   },
   "bugs": {
-    "url": "https://github.com/chrisridge/boilerplate/issues"
+    "url": "https://github.com/chrisridge/NewProject/issues"
   },
-  "homepage": "https://github.com/chrisridge/boilerplate#readme"
+  "homepage": "https://github.com/chrisridge/NewProject#readme"
 }
