@@ -5,6 +5,8 @@ body {
     color: $text-color;
 }
 
+// HEADERS --------------------------------------------------------------------
+
 h1, h2, h3, h4, h5, h6 {
     color: $header-color;
 }
@@ -37,8 +39,10 @@ h6, .h6 {
     color: $header-color-secondary;
 }
 
+// TEXT FORMATTING ------------------------------------------------------------
+
 strong, b {
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 em, i {
@@ -64,6 +68,9 @@ a:hover {
   outline-width: 1;
 }
 
+// LAYOUTS --------------------------------------------------------------------
+// Lists
+
 li ul, li ol {
     margin: 0;
 }
@@ -86,20 +93,21 @@ dl {
 }
 
 dl dt {
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 dd {
     margin-left: 1.5em;
 }
 
+// Tables
 table {
     margin-bottom: 1.4em;
     width:100%;
 }
 
 th {
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 thead th {
