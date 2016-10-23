@@ -16,7 +16,6 @@
     ---- node_modules
 */
 
-
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     cleancss = require('gulp-clean-css'),
@@ -62,7 +61,7 @@ gulp.task('styles', function () {
         .pipe(plumber())
         .pipe(sass.sync())
         .pipe(autoprefixer())
-        .pipe(cleancss())
+        // .pipe(cleancss())
         .pipe(concat(styles.output))
         .pipe(gulp.dest(styles.destination));
 });
