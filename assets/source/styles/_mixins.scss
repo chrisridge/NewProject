@@ -1,14 +1,14 @@
 // FONT SIZE - PX TO REM ------------------------------------------------------
-// @include font-size(16)
 
+// @include font-size(16)
 @mixin font-size($size: $font-size) {
     font-size: ($size) + px;
     font-size: ($size / $font-size) + rem;
 }
 
 // BACKGROUND GRADIENT GENERATOR ----------------------------------------------
-// @include background-gradient(background, start color, end color);
 
+// @include background-gradient(background, start color, end color);
 @mixin background-gradient($background-color, $start-color, $end-color) {
     background-color: $background-color;
     background-repeat: repeat-x;
@@ -20,8 +20,8 @@
 }
 
 // LINK COLOR GENERATOR -------------------------------------------------------
-// @include links(link color, actice color, hover color)
 
+// @include links(link color, actice color, hover color)
 @mixin links ($link, $active, $hover ) {
     a {
         color: $link;
@@ -33,8 +33,8 @@
 }
 
 // BREAKPOINT GENERATOR -------------------------------------------------------
-// @include breakpoint(size){ content }
 
+// @include breakpoint(size){ content }
 @mixin breakpoint($point) {
     // Mobile
     @if $point == mobile {
