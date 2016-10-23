@@ -2,6 +2,7 @@
     FILE STRUCTURE ------------------------------------------------------------
 
     assets
+    test
     -- distribution
     ---- images
     ---- markup
