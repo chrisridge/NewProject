@@ -1,16 +1,17 @@
 // CLEARFIX -------------------------------------------------------------------
 
-.row  {
-    position: relative;
-    width: $grid-width;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    &:after{
-        content: "";
-        display: table;
-        clear: both;
-    }
+.row {
+  *zoom: 1;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }
 
 // DEFAULT COLUMN STYLE -------------------------------------------------------
