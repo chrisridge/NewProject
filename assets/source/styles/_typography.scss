@@ -129,3 +129,11 @@ tfoot {
 caption {
     background: #eee;
 }
+blockquote {
+    border-left: 4px solid #000000;
+    margin-left: 0;
+    padding: 1rem 2rem;
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
