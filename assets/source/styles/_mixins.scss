@@ -1,27 +1,150 @@
-// FONT SIZE - PX TO REM ------------------------------------------------------
+/*
+    FONT SIZE
+    Usage: @include font-size(16)
+    Output:
+        .example {
+            font-size: 16px;
+            font-size: 1rem;
+        }
+*/
 
-// @include font-size(16)
 @mixin font-size($size: $font-size) {
     font-size: ($size) + px;
     font-size: ($size / $font-size) + rem;
 }
 
-// BACKGROUND GRADIENT GENERATOR ----------------------------------------------
+/*
+    BOX SIZING
+    Usage: @include box-sizing(border-box)
+    Output:
+        .example {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+*/
 
-// @include background-gradient(background, start color, end color);
-@mixin background-gradient($background-color, $start-color, $end-color) {
-    background-color: $background-color;
-    background-repeat: repeat-x;
-    // Android 2.1 - 3.0
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($start-color), to($end-color));
-    // Safari 5.1+, Chrome 10+, iOS Safari, Android 4.0+
-    background-image: -webkit-linear-gradient($start-color, $end-color);
-    background-image: linear-gradient($start-color, $end-color);
+@mixin box-sizing($type) {
+    box-sizing: $type;
+    -moz-box-sizing: $type;
 }
 
-// LINK COLOR GENERATOR -------------------------------------------------------
+/*
+    CENTER ALL
+    Usage: @include center-all;
+    Output:
+        .example {
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+*/
 
-// @include links(link color, actice color, hover color)
+@mixin center-all {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*
+    OPACITY
+    Usage: @include opacity(0.5);
+    Output:
+        .example {
+            opacity: 0.5;
+            filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#50)";
+        }
+*/
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})";
+}
+
+/*
+    POSITION
+    Usage: @include position(absolute, 10px, 10px, null, 39px);
+    Output:
+        .example {
+            position:absolute;
+            top:10px;
+            right:10px;
+            left:39px
+        }
+*/
+
+@mixin position($type, $top, $right, $bottom, $left) {
+    position: $type;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+/*
+    SIZE
+    Usage: @include size(200px, 100px);
+    Output:
+        .example {
+            width:200px;
+            height:100px
+        }
+*/
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+/*
+    BACKGROUND GRADIENT
+    Usage: @include background-gradient(#efefef, #f00f00, vertical);
+    Output:
+        .example {
+            background: #efefef;
+            background: -webkit-linear-gradient(top, #efefef, #f00f00);
+            background: linear-gradient(to bottom, #efefef, #f00f00);
+        }
+*/
+
+@mixin background-gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+    @if $orientation == 'vertical' {
+        background: -webkit-linear-gradient(top, $start-color, $end-color);
+        background: linear-gradient(to bottom, $start-color, $end-color);
+    } @else if $orientation == 'horizontal' {
+        background: -webkit-linear-gradient(left, $start-color, $end-color);
+        background: linear-gradient(to right, $start-color, $end-color);
+    } @else {
+        background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+        background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+}
+
+/*
+    LINKS
+    Usage: @include links(red, blue, yellow)
+    Output:
+        a {
+          color: red;
+          text-decoration: underline;
+        }
+        a:visited {
+          color: red;
+        }
+        a:hover {
+          color: yellow;
+        }
+        a:active {
+          color: blue;
+        }
+*/
+
 @mixin links ($link, $active, $hover ) {
     a {
         color: $link;
@@ -32,9 +155,11 @@
     }
 }
 
-// BREAKPOINT GENERATOR -------------------------------------------------------
+/*
+    BREAKPOINTS
+    Usage: @include breakpoint(size){ content }
+*/
 
-// @include breakpoint(size){ content }
 @mixin breakpoint($point) {
     // Mobile
     @if $point == mobile {
