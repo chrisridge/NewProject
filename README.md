@@ -5,8 +5,8 @@ Default structure and files for new projects
 1. Run "npm install" from the tools folder.
 
 ## File Structure
-* application (backend assets)
-* assets (frontend assets)
+* application _(backend assets)_
+* assets _(frontend assets)_
   * source
-  * distribution (optimised assets)
-* tools (task runners)
+  * distribution _(optimised assets)_
+* tools _(task runners)_
