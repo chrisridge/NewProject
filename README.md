@@ -8,5 +8,5 @@ Boilerplate for new frontend projects
 * application (files related to the application backend)
 * assets
   * source (development files) 
-  * distribution (files ready to be deployed)
-* controllers
+  * distribution (files ready for deployment)
+* controllers (task runners)
