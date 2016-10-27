@@ -1,5 +1,5 @@
 # New Project - Bolierplate
-Boilerplate for new projects
+Default structure and files for new projects 
 
 ## Getting started
 1. Run "npm install" from the tools folder.
