@@ -26,29 +26,29 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber');
 
 var root = {
-        destination: "../distribution/"
+        destination: "../assets/distribution/"
     },
     styles = {
-        destination: "../distribution/styles/",
-        source: "../source/styles/**/*.scss",
+        destination: "../assets/distribution/styles/",
+        source: "../assets/source/styles/**/*.scss",
         output: "min.css"
     },
     scripts = {
-        destination: "../distribution/scripts/",
-        source: "../source/scripts/**/*.js",
+        destination: "../assets/distribution/scripts/",
+        source: "../assets/source/scripts/**/*.js",
         output: "min.js"
     },
     markup = {
-        destination: "../distribution/markup/",
-        source: "../source/markup/**/*.kit"
+        destination: "../assets/distribution/markup/",
+        source: "../assets/source/markup/**/*.kit"
     },
     index = {
-        destination: "../../",
-        source: "../source/markup/index.kit"
+        destination: "../assets/",
+        source: "../assets/source/markup/index.kit"
     },
     images = {
-        destination: "../distribution/images/",
-        source: "../source/images/**/*"
+        destination: "../assets/distribution/images/",
+        source: "../assets/source/images/**/*"
     };
 
 gulp.task('scripts', function () {
