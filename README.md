@@ -5,10 +5,8 @@ Boilerplate for new frontend projects
 1. Run "npm install" from the controllers folder.
 
 ## File Structure
-* application
-   files related to the application backend
+* application (files related to the application backend)
 * assets
-  * source
-     development files 
-  * distribution
+  * source (development files) 
+  * distribution (files ready to be deployed)
 * controllers
