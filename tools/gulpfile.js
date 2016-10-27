@@ -43,8 +43,8 @@ var root = {
         source: "../assets/source/markup/**/*.kit"
     },
     index = {
-        destination: "../assets/",
-        source: "../assets/source/markup/index.kit"
+        destination: "../../assets/",
+        source: "../../assets/source/markup/index.kit"
     },
     images = {
         destination: "../assets/distribution/images/",
