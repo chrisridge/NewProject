@@ -9,6 +9,6 @@ Boilerplate for new frontend projects
    files related to the application backend
 * assets
   * source
-   development files 
+     development files 
   * distribution
 * controllers
