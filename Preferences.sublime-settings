@@ -9,7 +9,7 @@
 	"font_face": "'Consolas', 'MS Gothic', monospace",
 	"font_options":
 	[
-		"subpixel_antialias"
+		"directwrite"
 	],
 	"font_size": 11,
 	"highlight_line": true,
