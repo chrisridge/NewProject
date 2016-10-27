@@ -6,9 +6,9 @@ Boilerplate for new frontend projects
 
 ## File Structure
 * application
-  files related to the application backend
+   files related to the application backend
 * assets
   * source
-    development files 
+   development files 
   * distribution
 * controllers
