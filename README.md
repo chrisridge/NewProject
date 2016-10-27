@@ -5,5 +5,6 @@ Boilerplate for new frontend projects
 
 ## File Structure
 * assets
-⋅⋅* test
+  * source
+  * distribution
 * controllers
