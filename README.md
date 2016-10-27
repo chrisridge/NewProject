@@ -1,7 +1,7 @@
 # New Project
 Boilerplate for new frontend projects
 ## Getting started
-1. Run "npm install" from controllers.
+1. Run "npm install" from the controllers folder.
 
 ## File Structure
 * application
