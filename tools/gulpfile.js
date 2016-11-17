@@ -23,9 +23,10 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
     kit = require('gulp-kit'),
-    plumber = require('gulp-plumber');
+    plumber = require('gulp-plumber'),
+    del = require('del');
 
-var root = {
+var distribution = {
         destination: "../assets/distribution/"
     },
     styles = {
@@ -87,6 +88,11 @@ gulp.task('images', function() {
     return gulp.src(images.source)
         .pipe(imagemin())
         .pipe(gulp.dest(images.destination));
+});
+
+gulp.task('clean', function() {
+    console.log('deleting distribution folder');
+    return del(gulp.dest(distribution.destination));
 });
 
 gulp.task('watch', function () {
