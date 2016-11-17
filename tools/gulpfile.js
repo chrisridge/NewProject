@@ -26,29 +26,29 @@ var gulp = require('gulp'),
     del = require('del');
 
 var distribution = {
-        destination: "../assets/distribution/";
+        destination: "../assets/distribution/"
     },
     styles = {
         destination: "../assets/distribution/styles/",
         source: "../assets/source/styles/**/*.scss",
-        output: "min.css";
+        output: "min.css"
     },
     scripts = {
         destination: "../assets/distribution/scripts/",
         source: "../assets/source/scripts/**/*.js",
-        output: "min.js";
+        output: "min.js"
     },
     markup = {
         destination: "../assets/distribution/markup/",
-        source: "../assets/source/markup/**/*.kit";
+        source: "../assets/source/markup/**/*.kit"
     },
     index = {
         destination: "../../assets/",
-        source: "../../assets/source/markup/index.kit";
+        source: "../../assets/source/markup/index.kit"
     },
     images = {
         destination: "../assets/distribution/images/",
-        source: "../assets/source/images/**/*";
+        source: "../assets/source/images/**/*"
     };
 
 gulp.task('scripts', function () {
