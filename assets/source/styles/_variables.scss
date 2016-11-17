@@ -5,7 +5,7 @@ $font-family-secondary: Georgia, "Times New Roman", serif;
 
 $font-size: 16;
 
-// Lightest colour that meets WCAG AAA
+// lightest colour that meets WCAG AAA
 $text-color: #595959;
 $text-color-secondary: #414141;
 $text-color-tertiary: #6c6c6c;
@@ -19,26 +19,26 @@ $link-color-hover: #ff0054;
 
 // GRID -----------------------------------------------------------------------
 
-// Set column class identifier
+// column class identifier
 $grid-column-class: column;
 
-// Set offset class identifier
+// offset class identifier
 $grid-offset-class: offset;
 
-// Set grid width
+// grid width
 $grid-width: 100%;
 
-// Set number of columns
+// number of columns
 $grid-column-number: 16;
 
-// Set the initial breakpoint. Sizes below this will display columns linearly.
+// initial breakpoint - below this columns will display linearly.
 $breakpoint-xs: 480px;
 
-// Set the small breakpoint
+// small breakpoint
 $breakpoint-s: 960px;
 
-// Set the large breakpoint
+// large breakpoint
 $breakpoint-l: 1200px;
 
-// Set the extra large breakpoint
+// extra large breakpoint
 $breakpoint-xl: 1680px;
