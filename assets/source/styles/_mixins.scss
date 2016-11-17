@@ -45,11 +45,33 @@
    box-sizing: $i;    
 }
 
+/*
+    USER SELECT
+    Usage: @include user-select(none)
+    Output:
+        .example {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+*/
+
 @mixin user-select($i) {
     -webkit-user-select: $i;
     -moz-user-select: $i;
     user-select: $i;
 }
+
+/*
+    BOX SHADOW
+    Usage: @include box-shadow(10px 10px 5px 0px rgba(0,0,0,0.75))
+    Output:
+        .example {
+            -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        }
+*/
 
 @mixin box-shadow($i) {
     -webkit-box-shadow: $i;
@@ -57,11 +79,33 @@
     box-shadow: $i;
 }
 
+/*
+    TRANSFORM
+    Usage: @include transform(scale(0.769, 1))
+    Output:
+        .example {
+            -webkit-transform: scale(0.769, 1); 
+            -ms-transform: scale(0.769, 1);
+            transform: scale(0.769, 1);
+        }
+*/
+
 @mixin transform($i) {
    -webkit-transform: $i; 
    -ms-transform: $i;
    transform: $i;
 }
+
+/*
+    BORDER RADIUS
+    Usage: @include radius(4px)
+    Output:
+        .example {
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+*/
 
 @mixin radius($radius: $border-radius) {
     -webkit-border-radius: $radius;
