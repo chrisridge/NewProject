@@ -1,3 +1,19 @@
+// CLEARFIX
+%row,
+.row {
+    *zoom: 1;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
 /*
     FONT SIZE
     Usage: @include font-size(16)
