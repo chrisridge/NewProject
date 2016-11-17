@@ -63,6 +63,12 @@
    transform: $i;
 }
 
+@mixin radius($radius: $border-radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
 /*
     CENTER ALL
     Usage: @include center-all;
