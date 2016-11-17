@@ -57,6 +57,12 @@
     box-shadow: $i;
 }
 
+@mixin transform($i) {
+   -webkit-transform: $i; 
+   -ms-transform: $i;
+   transform: $i;
+}
+
 /*
     CENTER ALL
     Usage: @include center-all;
