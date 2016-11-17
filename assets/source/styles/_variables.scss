@@ -2,7 +2,6 @@
 
 $font-family: Verdana, Arial, sans-serif;
 $font-family-secondary: Georgia, "Times New Roman", serif;
-
 $font-size: 16;
 
 // lightest colour that meets WCAG AAA
@@ -16,6 +15,12 @@ $header-color-secondary: #414141;
 $link-color: #5a00ff;
 $link-color-active: #00deff;
 $link-color-hover: #ff0054;
+
+// STYLE ----------------------------------------------------------------------
+
+$border-radius: 4px;
+$border-radius-small: 2px;
+$border-radius-large: 6px;
 
 // GRID -----------------------------------------------------------------------
 
