@@ -1,17 +1,17 @@
 /*
     FILE STRUCTURE ------------------------------------------------------------
-    -- assets
-    ---- distribution
-    ------ images
-    ------ markup
-    ------ scripts
-    ------ styles
-    ---- source
-    ------ images
-    ------ markup
-    ------ scripts
-    ------ styles
-    -- tools
+    .. assets
+    .... distribution
+    ...... images
+    ...... markup
+    ...... scripts
+    ...... styles
+    .... source
+    ...... images
+    ...... markup
+    ...... scripts
+    ...... styles
+    .. tools
 */
 
 var gulp = require('gulp'),
