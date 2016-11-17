@@ -60,6 +60,18 @@ em, i {
     background:#ff0;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
+.overline {
+    text-decoration: overline;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
 .small {
     @include font-size($font-size - 2);
 }
