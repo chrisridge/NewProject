@@ -11,8 +11,6 @@
     ---- markup
     ---- scripts
     ---- styles
-    -- controllers
-    ---- node_modules
 */
 
 var gulp = require('gulp'),
