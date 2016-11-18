@@ -1,4 +1,4 @@
-// 
+// set eu cookie law cookie
 function EuCookieAccept(){
     console.log("cookie set");
     var CurrentDateTime = "date";
@@ -12,6 +12,7 @@ function EuCookieCheck(){
         document.getElementById("eu-cookie-warning").style.display = 'block';
     }
 }
+
 // when the page is ready - http://youmightnotneedjquery.com/#ready
 function ready(fn) {
     if (document.readyState != 'loading'){
