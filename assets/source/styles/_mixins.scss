@@ -90,7 +90,7 @@
         }
 */
 
-@mixin transform($i) {
+@mixin transform($i...) {
    -webkit-transform: $i; 
    -ms-transform: $i;
    transform: $i;
