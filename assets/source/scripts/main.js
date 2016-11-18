@@ -8,7 +8,6 @@ function EuCookieAccept(){
 // check if eu cookie law cookie exists
 function EuCookieCheck(){
     if (document.cookie.length == 0) {
-        console.log("searching for eu cookie law cookie");
         document.getElementById("eu-cookie-warning").style.display = 'block';
     }
 }
