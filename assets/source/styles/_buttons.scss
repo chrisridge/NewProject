@@ -12,7 +12,6 @@
     text-shadow: none;
     @include font-size($font-size);
     @include radius($border-radius);
-    @include font-smoothing(antialiased);
     @include transition(transform 100ms ease, background 50ms ease, box-shadow 100ms ease);
     @include box-sizing(border-box);
     @include user-select(none);
