@@ -96,6 +96,13 @@
    transform: $i;
 }
 
+@mixin transition($i) {
+   -webkit-transition: $i;
+   -moz-transition: $i;
+   -ms-transition: $i;
+   transition: $i;
+}
+
 /*
     BORDER RADIUS
     Usage: @include radius(4px)
