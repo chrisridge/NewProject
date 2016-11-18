@@ -2,7 +2,7 @@
 function EuCookieAccept(){
     console.log("cookie set");
     var CurrentDateTime = "date";
-    document.cookie = "agree-to-cookies=yes";
+    document.cookie = "agree-to-cookies=yes; expires=Mon, 1 APR 2030 12:00:00 UTC";
 }
 
 // check if eu cookie law cookie exists
