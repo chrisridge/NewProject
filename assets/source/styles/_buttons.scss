@@ -4,6 +4,7 @@
     line-height: 40px;
     padding: 0 18px;
     margin: 0;
+    letter-spacing:.25px;
     text-decoration: none;
     white-space: nowrap;
     display: inline-block;
@@ -18,18 +19,18 @@
 
 // the hover button style
 %button-hover {
-    @include transform(translate(-2px, 0px));
+    @include transform(translate(0, -1px));
     @include box-shadow(0px 6px 7px -2px rgba(0, 0, 0, 0.15));
 }
 
 // the active button style
 %button-active {
-    @include transform(translate(1px, 0px));
+    @include transform(translate(0, 1px));
     @include box-shadow(0px 5px 7px -1px rgba(0, 0, 0, 0.11));
 }
 
 // generate the buttons
-@mixin button ($button-modifier, $button-background-color, $button-hover-background-color, $button-text-color) {
+@mixin button ($button-modifier, $button-background-color, $button-hover-background-color, $button-active-background-color, $button-text-color) {
     a.button#{$button-modifier},
     a.button#{$button-modifier}:link,
     a.button#{$button-modifier}:visited {
@@ -43,11 +44,12 @@
         color: $button-text-color;
     }
     a.button#{$button-modifier}:active {
+        background: $button-active-background-color;
         @extend %button-active;
     }
 }
 
-// @include button('--button-modifier', background color, hover color, text color);
-@include button(null, #f00f00, #743b8d, #fff);
+// @include button('--button-modifier', background color, hover color, active color, text color);
+@include button(null, #455baa, #5475c4, #40549e, #fff);
 
 // <a class="button" href="" role="link" title="">Button</a>
