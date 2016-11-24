@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>GETTING STARTED WITH BRACKETS</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="main.css">
+
+
+        <style>
+
+            nav {
+                position: relative;
+                background: #0e0e0e;
+                width: 100%;
+            }
+            nav ul:after, ul li ul:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 0;
+            }
+
+            nav ul ul {
+                background: #3d3d3d;
+            }
+
+            nav ul li a {
+                color: #fff;
+                padding: 10px 15px;
+                display: block;
+            }
+
+            nav > ul > li > a {
+            }
+
+            nav ul li.active-tab > a {
+                background: #3d3d3d;
+                color: #fff;
+            }
+                ul li ul {
+                    display: none;
+                }
+
+                ul li.active-tab ul {
+                    display: block;
+                    width: 100%;
+                }
+
+            @media (min-width: 400px) {
+
+                nav > ul > li {
+                    float: left;
+                }
+
+
+                ul li ul li {
+                    float: left;
+                }
+
+                ul li:hover ul, ul li.active-tab ul {
+                    position: absolute;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                }
+
+            }
+
+        </style>
+
+
+    </head>
+    <body>
+
+        <nav>
+            <ul id="nav">
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3 +</a>
+                    <ul>
+                        <li><a href="#">Item 3.1</a></li>
+                        <li><a href="#">Item 3.2</a></li>
+                        <li><a href="#">Item 3.3</a></li>
+                        <li><a href="#">Item 3.4</a></li>
+                        <li><a href="#">Item 3.5</a></li>
+                    </ul>
+                </li>
+                <li onmouseover="TabCycle(this)"><a href="#">Item 4 +</a>
+                    <ul>
+                        <li><a href="#">Item 4.1</a></li>
+                        <li><a href="#">Item 4.2</a></li>
+                        <li><a href="#">Item 4.3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Item 5</a></li>
+                <li class="active-tab"><a href="#">Item 6 +</a>
+                    <ul>
+                        <li><a href="#">Item 6.1</a></li>
+                        <li><a href="#">Item 6.2</a></li>
+                        <li><a href="#">Item 6.3</a></li>
+                        <li><a href="#">Item 6.4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Item 7</a></li>
+            </ul>
+        </nav>
+
+<script>
+
+
+    // add tab-1, tab-2 etc
+    function AddNavigationIdentifiers(){
+
+        var NavigationContainer = document.getElementById('nav'),
+            NavigationListItems = NavigationContainer.children;
+
+            for ( var i = 0; i < NavigationListItems.length; i++ ) {
+                 NavigationListItems[i].classList.add('tab-' + i);
+            }
+
+    }
+    AddNavigationIdentifiers();
+
+
+
+
+
+
+    function TabCycle(i) {
+
+        console.log(i.classList);
+
+        var NavigationContainer = document.getElementById('nav'),
+            NavigationListItems = NavigationContainer.children;
+            //activate this function on mouseover
+
+            // remove class from all siblings
+            for ( var i = 0; i < NavigationListItems.length; i++ ) {
+                 NavigationListItems[i].classList.remove("active-tab");
+            }
+
+
+        console.log(i.classList);
+
+        if (i.classList.contains("active-tab")){
+            console.log('help')
+
+        } else {
+            console.log('hwep')
+        }
+
+    }
+
+
+
+
+
+
+
+
+    function navFunc(){
+
+    var NavigationContainer = document.getElementById('nav'), // identifier of the outer ul
+        NavigationListItems = NavigationContainer.children, // all top level list items
+        NavigationVisibleListItems = null, // list items with the visible class
+        NavigationHiddenListItems = null, // list items with the hidden class
+        ListItemsCombinedWidth = 0, // combined width of all visible list items
+        ulWidth = NavigationContainer.offsetWidth; // width of the outer ul
+
+        // 2 functions, 1 on load and the other on resize
+        // on load targets the li wheras the on resize targets the class name?
+
+        function AddVisibleClass() {
+            // add visible to all tabs
+            for ( var i = 0; i < NavigationListItems.length; i++ ) {
+                NavigationListItems[i].classList.add('visible');
+                // find the last item
+                if (i == NavigationListItems.length - 1) {
+                    NavigationListItems[i].classList.add('last');
+                }
+            }
+        }
+
+        function RemoveLastTab() {
+            // hide last visible tab
+            for ( var i = 0; i < NavigationListItems.length; i++ ) {
+                if (NavigationListItems[i].className == 'visible last') {
+                    NavigationListItems[i].classList.remove('visible');
+                    NavigationListItems[i].classList.add('removed');
+                }
+            }
+        }
+
+        function AddLastTab(){
+
+        }
+
+        function CalculateCombinedWidth() {
+            for ( var i = 0; i < NavigationListItems.length; i++ ) {
+                ListItemsCombinedWidth += NavigationListItems[i].offsetWidth;
+            }
+        }
+
+        AddVisibleClass();
+        CalculateCombinedWidth();
+
+
+
+
+
+
+
+// find visible tabs
+for ( var i = 0; i < NavigationListItems.length; i++ ) {
+    if (NavigationListItems[i].className == 'visible') {
+        NavigationVisibleListItems += NavigationListItems[i];
+    }
+}
+
+
+
+
+
+
+
+        if ( ListItemsCombinedWidth > ulWidth ) {
+            console.log('list');
+        } else if ( ulWidth > ListItemsCombinedWidth ) {
+            console.log('ul');
+        }
+
+    }
+
+    navFunc();
+
+    window.onresize = function(event) {
+        navFunc();
+    };
+
+
+
+        </script>
+
+
+    </body>
+</html>
