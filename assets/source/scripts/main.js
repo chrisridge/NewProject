@@ -1,6 +1,5 @@
 // set eu cookie law cookie
 function euCookieAccept(){
-    console.log("cookie set");
     var CurrentDateTime = "date";
     document.cookie = "agree-to-cookies=yes; expires=Mon, 1 APR 2030 12:00:00 UTC";
 }
