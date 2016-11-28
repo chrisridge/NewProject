@@ -27,5 +27,5 @@ function siteNavigation() {
 ready(function() {
     euCookieCheck();
     siteNavigation();
-    console.log('Scripts are working.');
+    console.log('Scripts are working!');
 });
