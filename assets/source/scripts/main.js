@@ -21,6 +21,7 @@ function ready(fn) {
     }
 }
 
+// control the functionality of the primary website navgation
 function siteNavigation() {
 }
 
