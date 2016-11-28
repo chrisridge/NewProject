@@ -20,6 +20,8 @@ function ready(fn) {
         document.addEventListener('DOMContentLoaded', fn);
     }
 }
+
+// load scripts here
 ready(function() {
     console.log("Seems to be working.");
     EuCookieCheck();
