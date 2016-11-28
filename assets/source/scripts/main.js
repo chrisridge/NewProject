@@ -21,8 +21,12 @@ function ready(fn) {
     }
 }
 
+function siteNavigation() {
+}
+
 // load scripts here
 ready(function() {
     console.log("Seems to be working.");
     euCookieCheck();
+    siteNavigation();
 });
