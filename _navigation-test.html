@@ -97,7 +97,7 @@
                         <li><a href="#">Item 3.5</a></li>
                     </ul>
                 </li>
-                <li onmouseover="TabCycle(this)"><a href="#">Item 4 +</a>
+                <li><a href="#">Item 4 +</a>
                     <ul>
                         <li><a href="#">Item 4.1</a></li>
                         <li><a href="#">Item 4.2</a></li>
@@ -105,7 +105,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Item 5</a></li>
-                <li class="active-tab"><a href="#">Item 6 +</a>
+                <li><a href="#" >Item 6 +</a>
                     <ul>
                         <li><a href="#">Item 6.1</a></li>
                         <li><a href="#">Item 6.2</a></li>
@@ -119,49 +119,85 @@
 
 <script>
 
+    function navigationActiveTabCycle(hoveredTab) {
 
-    // add tab-1, tab-2 etc
-    function AddNavigationIdentifiers(){
+        var navigationContainer = document.getElementById('nav'), // navigation container
+            navigationListItems = navigationContainer.children, // navigation items
+            activeTabClass = 'active-tab', // class used for active items
+            // WORKING ON DROPDOWN ITEMS
+            dropdownItems = {};
 
-        var NavigationContainer = document.getElementById('nav'),
-            NavigationListItems = NavigationContainer.children;
+            navigationListItems[2].classList.add(activeTabClass);
 
-            for ( var i = 0; i < NavigationListItems.length; i++ ) {
-                 NavigationListItems[i].classList.add('tab-' + i);
+            function removeActiveTabs(){
+                // cycle through each tab ...
+                for ( var i = 0; i < navigationListItems.length; i++ ) {
+                    // remove the active tab class
+                    navigationListItems[i].classList.remove(activeTabClass);
+                }
             }
 
-    }
-    AddNavigationIdentifiers();
+            // cycle through each tab ...
+            for ( var i = 0; i < navigationListItems.length; i++ ) {
 
+                // when there's more than 1 child - i.e. when it's a dropdown...
+                if (navigationListItems[i].children.length > 1) {
+                    // add each dropdown item to the list of dropdown items
+                    dropdownItems += navigationListItems[i];
+                }
 
+                // on mouse over ...
+                navigationListItems[i].addEventListener( 'mouseover', function() {
+                    // when there's more than 1 child - i.e. when it's a dropdown...
+                    if (this.children.length > 1) {
+                        // remove the active tab class
+                        removeActiveTabs()
+                        // apply active tab class to current tab
+                        this.classList.add(activeTabClass);
+                    }
+                });
 
+                // add tab-1, tab-2 etc
+                navigationListItems[i].classList.add('tab-' + i, 'visible');
 
-
-
-    function TabCycle(i) {
-
-        console.log(i.classList);
-
-        var NavigationContainer = document.getElementById('nav'),
-            NavigationListItems = NavigationContainer.children;
-            //activate this function on mouseover
-
-            // remove class from all siblings
-            for ( var i = 0; i < NavigationListItems.length; i++ ) {
-                 NavigationListItems[i].classList.remove("active-tab");
             }
+                console.log(dropdownItems)
+                console.log(dropdownItems[1])
 
 
-        console.log(i.classList);
-
-        if (i.classList.contains("active-tab")){
-            console.log('help')
-
-        } else {
-            console.log('hwep')
-        }
 
     }
+
+    navigationActiveTabCycle();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -213,8 +249,8 @@
             }
         }
 
-        AddVisibleClass();
-        CalculateCombinedWidth();
+       // AddVisibleClass();
+       // CalculateCombinedWidth();
 
 
 
@@ -243,7 +279,7 @@ for ( var i = 0; i < NavigationListItems.length; i++ ) {
 
     }
 
-    navFunc();
+  //  navFunc();
 
     window.onresize = function(event) {
         navFunc();
