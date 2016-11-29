@@ -1112,7 +1112,7 @@ blockquote {
 
 #eu-cookie-warning {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
@@ -1183,7 +1183,7 @@ a.button:visited {
   color: #fff; }
 
 a.button:hover {
-  background: #4b5dc9;
+  background: #55779a;
   color: #fff; }
 
 a.button:active {
@@ -1196,7 +1196,7 @@ a.button--red:visited {
   color: #fff; }
 
 a.button--red:hover {
-  background: #f00f00;
+  background: #f35343;
   color: #fff; }
 
 a.button--red:active {
@@ -1209,7 +1209,7 @@ a.button--green:visited {
   color: #fff; }
 
 a.button--green:hover {
-  background: #f00f00;
+  background: #48d2aa;
   color: #fff; }
 
 a.button--green:active {
@@ -1222,7 +1222,7 @@ a.button--blue:visited {
   color: #fff; }
 
 a.button--blue:hover {
-  background: #4b5dc9;
+  background: #5b76d4;
   color: #fff; }
 
 a.button--blue:active {
@@ -1232,11 +1232,11 @@ a.button--yellow,
 a.button--yellow:link,
 a.button--yellow:visited {
   background: #efc921;
-  color: #fff; }
+  color: #544e00; }
 
 a.button--yellow:hover {
-  background: #f00f00;
-  color: #fff; }
+  background: #ffdd44;
+  color: #544e00; }
 
 a.button--yellow:active {
   background: #000; }
