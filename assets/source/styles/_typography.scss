@@ -75,6 +75,11 @@ em, i {
     @include font-size($font-size + 2);
 }
 
+.lead {
+    @include font-size($font-size + 4);
+    font-weight: 300;
+}
+
 @include links($link-color, $link-color-active, $link-color-hover);
 
 a:active,
