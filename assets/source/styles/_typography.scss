@@ -143,10 +143,11 @@ tfoot {
 caption {
     background: #eee;
 }
+
 blockquote {
-    border-left: 4px solid #000000;
     margin-left: 0;
     padding: 1rem 2rem;
+    border-left: 3px solid #e4e4e4;
     p:last-child {
         margin-bottom: 0;
     }
