@@ -41,8 +41,8 @@
 
 @mixin box-sizing($i) {
    -webkit-box-sizing: $i;
-   -moz-box-sizing: $i; 
-   box-sizing: $i;    
+   -moz-box-sizing: $i;
+   box-sizing: $i;
 }
 
 /*
@@ -84,19 +84,19 @@
     Usage: @include transform(scale(0.769, 1))
     Output:
         .example {
-            -webkit-transform: scale(0.769, 1); 
+            -webkit-transform: scale(0.769, 1);
             -ms-transform: scale(0.769, 1);
             transform: scale(0.769, 1);
         }
 */
 
 @mixin transform($i...) {
-   -webkit-transform: $i; 
+   -webkit-transform: $i;
    -ms-transform: $i;
    transform: $i;
 }
 
-@mixin transition($i) {
+@mixin transition($i...) {
    -webkit-transition: $i;
    -moz-transition: $i;
    -ms-transition: $i;
