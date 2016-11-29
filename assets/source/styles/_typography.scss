@@ -7,11 +7,11 @@ body {
 
 // HEADERS --------------------------------------------------------------------
 
-h1, .h1, 
-h2, .h2, 
-h3, .h3, 
-h4, .h4, 
-h5, .h5, 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
 h6, .h6 {
     color: $header-color;
     display: block;
@@ -24,21 +24,23 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    @include font-size(24);
+    @include font-size(28);
 }
 
 h3, .h3 {
-    @include font-size($font-size);
+    @include font-size(22);
 }
 
 h4, .h4 {
-    @include font-size($font-size - 2);
+    @include font-size(18);
 }
 
-h5, .h5, 
+h5, .h5 {
+    @include font-size(16);
+}
+
 h6, .h6 {
-    @include font-size($font-size - 2);
-    color: $header-color-secondary;
+    @include font-size(14);
 }
 
 // TEXT FORMATTING ------------------------------------------------------------
@@ -52,7 +54,7 @@ em, i {
 }
 
 .highlight {
-    background:#ff0;
+    background: #fdffa4;
 }
 
 .underline {
@@ -76,7 +78,7 @@ em, i {
 }
 
 .lead {
-    @include font-size($font-size + 4);
+    @include font-size($font-size + 6);
     font-weight: 300;
 }
 
