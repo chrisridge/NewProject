@@ -31,18 +31,11 @@ h3, .h3 {
 }
 
 h4, .h4 {
-    @include font-size($font-size);
-    font-family: $font-family-secondary;
-    color: $header-color-secondary;
-}
-
-h5, .h5 {
     @include font-size($font-size - 2);
 }
 
-h6, .h6 {
+h5, .h5, h6, .h6 {
     @include font-size($font-size - 2);
-    font-family: $font-family-secondary;
     color: $header-color-secondary;
 }
 
