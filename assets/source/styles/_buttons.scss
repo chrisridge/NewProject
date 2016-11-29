@@ -51,6 +51,10 @@
 }
 
 // @include button('--button-modifier', background color, hover color, active color, text color);
-@include button(null, #455baa, #4b5dc9, #394b8b, #fff);
+@include button(null, #37526d, #4b5dc9, #394b8b, #fff);
+@include button('--red', #da3e2e, #f00f00, #000, #fff);
+@include button('--green', #20b98d, #f00f00, #000, #fff);
+@include button('--blue', #455baa, #4b5dc9, #394b8b, #fff);
+@include button('--yellow', #efc921, #f00f00, #000, #fff);
 
 // <a class="button" href="" role="link" title="">Button</a>
