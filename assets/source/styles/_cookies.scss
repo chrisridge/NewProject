@@ -4,14 +4,17 @@
     left: 0;
     right: 0;
     width: 100%;
-    background: red;
+    background: #fff6d2;
     display: none;
+    padding: 40px 0;
     > .container {
         display: block;
+        position: relative;
     }
     h6 {
         display: block;
-        margin: 0;
+        margin: 0 0 10px 0;
+        @include font-size(20);
     }
     p {
         display: block;
@@ -19,6 +22,8 @@
     }
     a.close-eu-cookie-warning {
         display: inline-block;
-        float: right;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }
