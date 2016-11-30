@@ -1023,7 +1023,11 @@ em, i {
   font-style: italic; }
 
 .highlight {
-  background: #fdffa4; }
+  background-image: -webkit-linear-gradient(#fdffa4, #fdffa4);
+  background-image: linear-gradient(#fdffa4, #fdffa4);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 50%; }
 
 .underline {
   text-decoration: underline; }
@@ -1107,10 +1111,14 @@ caption {
 
 blockquote {
   margin-left: 0;
-  padding: 1rem 2rem;
+  padding: 15px 2rem;
   border-left: 3px solid #e4e4e4; }
   blockquote p:last-child {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-style: italic;
+    color: #8f959a; }
+  blockquote p:first-child {
+    margin-top: 0; }
 
 #eu-cookie-warning {
   position: fixed;
@@ -1162,22 +1170,22 @@ a.button--yellow:visited {
   font-size: 16px;
   font-size: 1rem;
   border-radius: 4px;
-  -webkit-transition: transform 100ms ease, background 50ms ease, box-shadow 100ms ease;
-  -webkit-transition: background 50ms ease, box-shadow 100ms ease, -webkit-transform 100ms ease;
-  transition: background 50ms ease, box-shadow 100ms ease, -webkit-transform 100ms ease;
-  transition: transform 100ms ease, background 50ms ease, box-shadow 100ms ease;
-  transition: transform 100ms ease, background 50ms ease, box-shadow 100ms ease, -webkit-transform 100ms ease;
+  -webkit-transition: transform 100ms ease, background 100ms ease, box-shadow 100ms ease;
+  -webkit-transition: background 100ms ease, box-shadow 100ms ease, -webkit-transform 100ms ease;
+  transition: background 100ms ease, box-shadow 100ms ease, -webkit-transform 100ms ease;
+  transition: transform 100ms ease, background 100ms ease, box-shadow 100ms ease;
+  transition: transform 100ms ease, background 100ms ease, box-shadow 100ms ease, -webkit-transform 100ms ease;
   box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
       user-select: none;
-  box-shadow: 0px 5px 7px -2px rgba(0, 0, 0, 0.12); }
+  box-shadow: 0px 5px 7px -1px rgba(0, 0, 0, 0.12); }
 
 a.button:hover, a.button--red:hover, a.button--green:hover, a.button--blue:hover, a.button--yellow:hover {
-  -webkit-transform: translate(0, -2px);
-  transform: translate(0, -2px);
-  box-shadow: 0px 6px 7px -2px rgba(0, 0, 0, 0.2); }
+  -webkit-transform: translate(0, -1px);
+  transform: translate(0, -1px);
+  box-shadow: 0px 6px 7px -1px rgba(0, 0, 0, 0.2); }
 
 a.button:active, a.button--red:active, a.button--green:active, a.button--blue:active, a.button--yellow:active {
   -webkit-transform: translate(0, 1px);
@@ -1195,7 +1203,7 @@ a.button:hover {
   color: #fff; }
 
 a.button:active {
-  background: #394b8b; }
+  background: #55779a; }
 
 a.button--red,
 a.button--red:link,
@@ -1208,7 +1216,7 @@ a.button--red:hover {
   color: #fff; }
 
 a.button--red:active {
-  background: #000; }
+  background: #f35343; }
 
 a.button--green,
 a.button--green:link,
@@ -1221,7 +1229,7 @@ a.button--green:hover {
   color: #fff; }
 
 a.button--green:active {
-  background: #000; }
+  background: #48d2aa; }
 
 a.button--blue,
 a.button--blue:link,
@@ -1234,7 +1242,7 @@ a.button--blue:hover {
   color: #fff; }
 
 a.button--blue:active {
-  background: #394b8b; }
+  background: #5b76d4; }
 
 a.button--yellow,
 a.button--yellow:link,
@@ -1247,7 +1255,7 @@ a.button--yellow:hover {
   color: #544e00; }
 
 a.button--yellow:active {
-  background: #000; }
+  background: #ffdd44; }
 
 .container {
   max-width: 1000px;

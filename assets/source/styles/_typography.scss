@@ -54,7 +54,11 @@ em, i {
 }
 
 .highlight {
-    background: #fdffa4;
+    background-image: -webkit-linear-gradient(#fdffa4, #fdffa4);
+    background-image: linear-gradient(#fdffa4, #fdffa4);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
 }
 
 .underline {
@@ -153,9 +157,14 @@ caption {
 
 blockquote {
     margin-left: 0;
-    padding: 1rem 2rem;
+    padding: 15px 2rem;
     border-left: 3px solid #e4e4e4;
     p:last-child {
         margin-bottom: 0;
+        font-style: italic;
+        color: #8f959a;
+    }
+    p:first-child {
+        margin-top: 0;
     }
 }
