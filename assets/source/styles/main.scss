@@ -5,11 +5,15 @@
 
 // structure
 @import "structure/grid.scss";
+@import "structure/blog.scss";
 
 // interface
 @import "interface/spinners.scss"; 
 @import "interface/cookies.scss"; 
 @import "interface/buttons.scss"; 
+
+// theme
+@import "theme/blue.scss"; 
 
 // project
 @import "project/typography.scss";
