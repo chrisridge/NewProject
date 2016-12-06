@@ -1,9 +1,14 @@
+// global - shouldn't require changing between projects
 @import "global-variables.scss";
 @import "global-mixins.scss";
 @import "global-normailise.scss";
 @import "global-grid.scss";
+
+// 
 @import "interface-spinners.scss"; 
 @import "interface-cookies.scss"; 
 @import "interface-buttons.scss"; 
+
+// project - styles specific to the current project
 @import "project-typography.scss";
 @import "project-styles.scss"; 
