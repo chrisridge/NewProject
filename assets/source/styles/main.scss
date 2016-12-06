@@ -3,8 +3,16 @@
 @import "normailise.scss";
 @import "grid.scss";
 @import "typography.scss";
-@import "interface/cookies.scss"; // eu cookie alert
-@import "interface/spinners.scss"; // loading spinner
+
+// eu cookie alert
+@import "interface/cookies.scss"; 
+
+// loading spinner
+@import "interface/spinners.scss"; 
 @import "interface/buttons.scss";
-@import "base.scss"; // top level generic styles
-@import "project.scss"; // project specific styles
+
+// top level generic styles
+@import "base.scss"; 
+
+// project specific styles
+@import "project.scss"; 
