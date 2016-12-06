@@ -1,9 +1,9 @@
-// global
-@import "variables.scss";
-
 // tools
+@import "variables.scss";
 @import "mixins.scss";
 @import "normailise.scss";
+
+// structure
 @import "grid.scss";
 
 // interface
