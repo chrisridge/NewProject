@@ -1,29 +1,15 @@
-//
 @import "variables.scss";
 
-//
 @import "mixins.scss";
 
-//
 @import "normailise.scss";
 
-//
 @import "grid.scss";
 
-//
 @import "typography.scss";
 
-// eu cookie alert
-@import "interface/cookies.scss"; 
+@import "interface/*.scss"; 
 
-// loading spinner
-@import "interface/spinners.scss"; 
-
-//
-@import "interface/buttons.scss";
-
-// top level generic styles
 @import "base.scss"; 
 
-// project specific styles
 @import "project.scss"; 
