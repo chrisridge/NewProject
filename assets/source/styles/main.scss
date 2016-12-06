@@ -1,10 +1,10 @@
 @import "global-variables.scss";
 @import "global-mixins.scss";
 @import "global-normailise.scss";
-@import "grid.scss";
-@import "typography.scss";
+@import "global-grid.scss";
 @import "interface-spinners.scss"; 
 @import "interface-cookies.scss"; 
 @import "interface-buttons.scss"; 
-@import "base.scss"; 
-@import "project.scss"; 
+@import "project-typography.scss";
+@import "project-base.scss"; 
+@import "project-project.scss"; 
