@@ -1,0 +1,31 @@
+// style for the loading spinner
+.loading-spinner, .loading-spinner:before, .loading-spinner:after {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.loading-spinner:before, .loading-spinner:after {
+    border: solid 5px #dcdcdc;
+    border-radius: 50%;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.loading-spinner {
+    position: relative;
+}
+
+.loading-spinner:after {
+    border-top: 5px solid #3882f5;
+    animation: loading-spinner-animate 900ms ease infinite;
+}
+
+@keyframes loading-spinner-animate {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+// <div class="loading-spinner"> </div>
