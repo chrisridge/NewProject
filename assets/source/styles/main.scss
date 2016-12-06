@@ -4,13 +4,13 @@
 @import "normailise.scss";
 
 // structure
-@import "grid.scss";
+@import "structure/grid.scss";
 
 // interface
-@import "interface-spinners.scss"; 
-@import "interface-cookies.scss"; 
-@import "interface-buttons.scss"; 
+@import "interface/spinners.scss"; 
+@import "interface/cookies.scss"; 
+@import "interface/buttons.scss"; 
 
 // project
-@import "typography.scss";
-@import "styles.scss"; 
+@import "project/typography.scss";
+@import "project/styles.scss"; 
