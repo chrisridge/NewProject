@@ -1,3 +1,4 @@
+// Style for the loading spinner
 .loading-spinner, .loading-spinner:before, .loading-spinner:after {
     width: 40px;
     height: 40px;
@@ -26,4 +27,35 @@
 @keyframes loading-spinner-animate {
     0% { transform: rotate(0); }
     100% { transform: rotate(360deg); }
+}
+
+// Style for the cookie warning box
+#eu-cookie-warning {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #fff6d2;
+    display: none;
+    padding: 40px 0;
+    > .container {
+        display: block;
+        position: relative;
+    }
+    h6 {
+        display: block;
+        margin: 0 0 10px 0;
+        @include font-size(20);
+    }
+    p {
+        display: block;
+        margin: 0;
+    }
+    a.close-eu-cookie-warning {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
