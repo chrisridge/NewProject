@@ -95,10 +95,20 @@ em, i {
     color: #fff;
 }
 
-.text--sub {
+
+.text--sub, .text--sup, sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
-.text--sup {
+.text--sub, sub {
+    bottom: -0.25em;
+}
+
+.text--sup, sup {
+    top: -0.5em;
 }
 
 @include links($link-color, $link-color-active, $link-color-hover);
