@@ -1,33 +1,33 @@
 // typography -----------------------------------------------------------------
 
 $font-family: Helvetica, Arial, freesans, sans-serif;
-$font-family-secondary: Georgia, "Times New Roman", serif;
+$font-family--secondary: Georgia, "Times New Roman", serif;
 $font-size: 16;
 
 $text-color: #3c5167;
-$text-color-secondary: #414141;
-$text-color-tertiary: #6c6c6c;
+$text-color--secondary: #414141;
+$text-color--tertiary: #6c6c6c;
 
 $header-color: #32465a;
-$header-color-secondary: #414141;
+$header-color--secondary: #414141;
 
 $link-color: #5a00ff;
-$link-color-active: #00deff;
-$link-color-hover: #ff0054;
+$link-color--active: #00deff;
+$link-color--hover: #ff0054;
 
 // ui styles ----------------------------------------------------------------------
 
 $border-radius: 4px;
-$border-radius-small: 2px;
-$border-radius-large: 6px;
+$border-radius--small: 2px;
+$border-radius--large: 6px;
 
 // grid -----------------------------------------------------------------------
 
 // column class identifier
-$grid-column-class: column;
+$grid-class--column: column;
 
 // offset class identifier
-$grid-offset-class: offset;
+$grid-class--offset: offset;
 
 // grid width
 $grid-width: 100%;
@@ -36,13 +36,13 @@ $grid-width: 100%;
 $grid-column-number: 16;
 
 // initial breakpoint - below this columns will display linearly
-$breakpoint-xs: 480px;
+$breakpoint--xs: 480px;
 
 // small breakpoint
-$breakpoint-s: 960px;
+$breakpoint--s: 960px;
 
 // large breakpoint
-$breakpoint-l: 1200px;
+$breakpoint--l: 1200px;
 
 // extra large breakpoint
-$breakpoint-xl: 1680px;
+$breakpoint--xl: 1680px;
