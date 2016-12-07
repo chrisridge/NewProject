@@ -95,6 +95,12 @@ em, i {
     color: #fff;
 }
 
+.text--sub {
+}
+
+.text--sup {
+}
+
 @include links($link-color, $link-color-active, $link-color-hover);
 
 a:active,
