@@ -45,11 +45,11 @@ h6, .h6 {
 
 // TEXT FORMATTING ------------------------------------------------------------
 
-strong, b {
+strong, b, .text--strong {
     font-weight: 600;
 }
 
-em, i {
+em, i, .text--italic {
     font-style: italic;
 }
 
