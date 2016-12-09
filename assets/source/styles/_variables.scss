@@ -24,16 +24,16 @@ $border-radius--large: 6px;
 // grid -----------------------------------------------------------------------
 
 // column class identifier
-$grid-class--column: 'column';
+$grid--column-class: 'column';
 
 // offset class identifier
-$grid-class--offset: 'offset';
+$grid--offset-class: 'offset';
 
 // grid width
-$grid-width: 100%;
+$grid--width: 100%;
 
 // number of columns
-$grid-column-number: 16;
+$grid--column-number: 16;
 
 // initial breakpoint - below this columns will display linearly
 $breakpoint--xs: 480px;
