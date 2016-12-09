@@ -137,6 +137,7 @@ ul li.active-tab ul {
 
                 // cycle through each tab ...
                 for ( var i = 0; i < navigationListItems.length; i++ ) {
+                    
                     // remove the active tab class
                     navigationListItems[i].classList.remove(activeTabClass);
                 }
@@ -151,8 +152,10 @@ ul li.active-tab ul {
 
                     // when there's more than 1 child - i.e. when it's a dropdown...
                     if (this.children.length > 1) {
-                        // remove the active tab class
+                        
+                        // remove the active tab class from all siblings
                         removeActiveTabs()
+                        
                         // apply active tab class to current tab
                         this.classList.add(activeTabClass);
                     }
@@ -164,7 +167,8 @@ ul li.active-tab ul {
 
                 // when there's more than 1 child - i.e. when it's a dropdown...
                 if (navigationListItems[i].children.length > 1) {
-
+                    
+                    // add the dropdown class
                     navigationListItems[i].classList.add(dropdownTabClass);
 
                 }
