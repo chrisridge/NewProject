@@ -1,9 +1,9 @@
-// set eu cookie law cookie
+// set eu law cookie
 function euCookieAccept() {
     document.cookie = 'agree-to-cookies=yes; expires=Mon, 1 APR 2030 12:00:00 UTC';
 }
 
-// check if eu cookie law cookie exists
+// check if eu law cookie exists
 function euCookieCheck() {
     if (document.cookie.length == 0) {
         document.getElementById('eu-cookie-warning').style.display = 'block';
@@ -27,5 +27,5 @@ function siteNavigation() {
 ready(function() {
     euCookieCheck();
     siteNavigation();
-    console.log('Scripts are working!');
+    console.log('Scripts are loading!');
 });
