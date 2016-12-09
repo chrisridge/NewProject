@@ -10,60 +10,61 @@
 
 
         <style>
+nav {
+    position: relative;
+    background: #2b1154;
+    width: 100%;
+}
+nav ul:after, ul li ul:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: block;
+    margin: 0;
+}
+nav ul ul {
+    background:#7151a2;
+}
+nav ul li a {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+}
+nav > ul > li > a {
+}
 
-            nav {
-                position: relative;
-                background: #0e0e0e;
-                width: 100%;
-            }
-            nav ul:after, ul li ul:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
+nav ul li.dropdown-tab > a {
+    background: #58388a;
+}
 
-            nav ul {
-                list-style: none;
-                padding: 0;
-            }
+ul li.active-tab ul {
+    display: block;
+    width: 100%;
+}
 
-            nav ul li {
-                display: block;
-                margin: 0;
-            }
 
-            nav ul ul {
-                background: #3d3d3d;
-            }
 
-            nav ul li a {
-                color: #fff;
-                padding: 10px 15px;
-                display: block;
-            }
-
-            nav > ul > li > a {
-            }
-
-            nav ul li.active-tab > a {
-                background: #3d3d3d;
-                color: #fff;
-            }
-                ul li ul {
-                    display: none;
-                }
-
-                ul li.active-tab ul {
-                    display: block;
-                    width: 100%;
-                }
 
             @media (min-width: 400px) {
 
+
+                nav ul li.dropdown-tab > a {
+                    background: none;
+                }
+
+                nav ul li.active-tab > a {
+                    background: #7151a2;
+                    color: #fff;
+                }
                 nav > ul > li {
                     float: left;
                 }
-
 
                 ul li ul li {
                     float: left;
@@ -76,8 +77,14 @@
                     width: 100%;
                 }
 
-            }
+                ul li ul {
+                    display: none;
+                }
 
+
+
+
+            }
         </style>
 
 
@@ -86,7 +93,7 @@
 
         <nav>
             <ul id="nav">
-                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Item 2</a></li>
                 <li><a href="#">Item 3 +</a>
                     <ul>
@@ -118,36 +125,30 @@
         </nav>
 
 <script>
-
     function navigationActiveTabCycle(hoveredTab) {
 
         var navigationContainer = document.getElementById('nav'), // navigation container
             navigationListItems = navigationContainer.children, // navigation items
             activeTabClass = 'active-tab', // class used for active items
-            // WORKING ON DROPDOWN ITEMS
-            dropdownItems = {};
-
-            navigationListItems[2].classList.add(activeTabClass);
+            dropdownTabClass = 'dropdown-tab', // class used for dropdown parents
+            dropdownListItems = document.getElementsByClassName(dropdownTabClass);
 
             function removeActiveTabs(){
+
                 // cycle through each tab ...
                 for ( var i = 0; i < navigationListItems.length; i++ ) {
                     // remove the active tab class
                     navigationListItems[i].classList.remove(activeTabClass);
                 }
+
             }
 
             // cycle through each tab ...
             for ( var i = 0; i < navigationListItems.length; i++ ) {
 
-                // when there's more than 1 child - i.e. when it's a dropdown...
-                if (navigationListItems[i].children.length > 1) {
-                    // add each dropdown item to the list of dropdown items
-                    dropdownItems += navigationListItems[i];
-                }
-
                 // on mouse over ...
                 navigationListItems[i].addEventListener( 'mouseover', function() {
+
                     // when there's more than 1 child - i.e. when it's a dropdown...
                     if (this.children.length > 1) {
                         // remove the active tab class
@@ -155,19 +156,25 @@
                         // apply active tab class to current tab
                         this.classList.add(activeTabClass);
                     }
+
                 });
 
-                // add tab-1, tab-2 etc
+                // add visible and tab-1, tab-2 etc
                 navigationListItems[i].classList.add('tab-' + i, 'visible');
 
+                // when there's more than 1 child - i.e. when it's a dropdown...
+                if (navigationListItems[i].children.length > 1) {
+
+                    navigationListItems[i].classList.add(dropdownTabClass);
+
+                }
+
             }
-                console.log(dropdownItems)
-                console.log(dropdownItems[1])
 
-
+            // add active class to the first dropdown item
+            dropdownListItems[0].classList.add(activeTabClass)
 
     }
-
     navigationActiveTabCycle();
 
 
@@ -182,42 +189,15 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     function navFunc(){
-
     var NavigationContainer = document.getElementById('nav'), // identifier of the outer ul
         NavigationListItems = NavigationContainer.children, // all top level list items
         NavigationVisibleListItems = null, // list items with the visible class
         NavigationHiddenListItems = null, // list items with the hidden class
         ListItemsCombinedWidth = 0, // combined width of all visible list items
         ulWidth = NavigationContainer.offsetWidth; // width of the outer ul
-
         // 2 functions, 1 on load and the other on resize
         // on load targets the li wheras the on resize targets the class name?
-
         function AddVisibleClass() {
             // add visible to all tabs
             for ( var i = 0; i < NavigationListItems.length; i++ ) {
@@ -228,7 +208,6 @@
                 }
             }
         }
-
         function RemoveLastTab() {
             // hide last visible tab
             for ( var i = 0; i < NavigationListItems.length; i++ ) {
@@ -238,55 +217,31 @@
                 }
             }
         }
-
         function AddLastTab(){
-
         }
-
         function CalculateCombinedWidth() {
             for ( var i = 0; i < NavigationListItems.length; i++ ) {
                 ListItemsCombinedWidth += NavigationListItems[i].offsetWidth;
             }
         }
-
        // AddVisibleClass();
        // CalculateCombinedWidth();
-
-
-
-
-
-
-
 // find visible tabs
 for ( var i = 0; i < NavigationListItems.length; i++ ) {
     if (NavigationListItems[i].className == 'visible') {
         NavigationVisibleListItems += NavigationListItems[i];
     }
 }
-
-
-
-
-
-
-
         if ( ListItemsCombinedWidth > ulWidth ) {
             console.log('list');
         } else if ( ulWidth > ListItemsCombinedWidth ) {
             console.log('ul');
         }
-
     }
-
   //  navFunc();
-
     window.onresize = function(event) {
         navFunc();
     };
-
-
-
         </script>
 
 
